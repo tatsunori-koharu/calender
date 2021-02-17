@@ -11,6 +11,18 @@
     </tr>
   </thead>
 
+  <thead>
+    <%= month_calendar events: @events do |date, events| %>
+      <%= date.day %>
+      <% events.each do |event| %>
+        <div>
+          <%= event.start_time.hour %>:<%= event.start_time.min %>
+          <%= event.end_time.hour %>:<%= event.end_time.min %>
+        </div>
+      <% end %>
+    <% end %>
+  </thead>
+
   <tbody>
     <% @events.each do |event| %>
       <tr>
@@ -25,5 +37,5 @@
 </table>
 
 <br>
-
+<%= link_to 'New User', new_user_path %>
 <%= link_to 'New Event', new_event_path %>

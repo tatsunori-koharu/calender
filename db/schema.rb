@@ -15,10 +15,8 @@ ActiveRecord::Schema.define(version: 2021_02_17_015807) do
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "start_time", null: false
     t.datetime "end_time", null: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -27,5 +25,4 @@ ActiveRecord::Schema.define(version: 2021_02_17_015807) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "events", "users"
 end
