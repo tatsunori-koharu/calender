@@ -62,32 +62,5 @@ div.actions {
   list-style: square; }
 
 label {
-  display: block; }
-  .simple-calendar {
-    .day {}
-  
-    .wday-0 {
-      width: 100px;
-    }
-    .wday-1 {}
-    .wday-2 {}
-    .wday-3 {}
-    .wday-4 {}
-    .wday-5 {}
-    .wday-6 {}
-  
-    .today {}
-    .past {}
-    .future {}
-  
-    .start-date {}
-  
-    .prev-month {
-      width: 100px;
-    }
-    .next-month { }
-    .current-month {}
-  
-    .has-events {}
-  }
-  
+  display: block;
+}
